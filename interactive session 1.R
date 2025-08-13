@@ -64,5 +64,77 @@ switch(species,
        "mouse" = print ("squeak")
        )
 
+# writing for loops
+dog_names <- c("teddy", "khora", "Banjo", "waffle")
+
+#create example for one data element to put into for loop
+#version with copy and paste
+print(paste("My dog's name is", dog_names[1]))
+print(paste("My dog's name is", dog_names[2]))
+print(paste("My dog's name is", dog_names[3]))
+print(paste("My dog's name is", dog_names[4]))
+
+#version with a variable that I can update
+pupster <- 1
+print(paste("My dog's name is", dog_names[pupster]))
+
+#convert to a for loop
+
+for (pupster in dog_names){
+  print(paste("My dog's name is", pupster))
+}
+
+#another for loop example
+#data im working with
+mass <- seq(from = 0, to = 3, by = 0.5)
+
+#practice writing forloop body
+i <- mass[1]
+new_val <- i + 2
+print(new_val)
+
+for (i in mass){
+  new_val <- i + 2
+  print(new_val)
+}
+
+#practice same example with indexing
+i <- 1
+new_val <- mass[i] + 2
+print(new_val)
+
+for (i in 1:length(mass)) { # defining iterator using seq_along
+  new_val <- mass[i] + 2
+  print(new_val)
+}
+#same thing
+for (i in seq_along(mass)) { # defining iterator using seq_along
+  new_val <- mass[i] + 2
+  print(new_val)
+}
+
+
+
+#another example with iterating by position
+tree_hieght <- c( 1,2,6,10)
+
+#example for first case
+tree_hieght[1] + tree_hieght[2]
+
+#convert into a generalizable expression
+i <-1
+val <- tree_hieght[i] + tree_hieght[i +1]
+print(val)
+
+#convert into a for loop
+#test out creating a sequence
+seq_along (tree_hieght)
+
+for (i in seq_along(tree_hieght)) {
+  val <- tree_hieght[i] + tree_hieght[i + 1]
+  print(val)
+}
+
+
 
 
