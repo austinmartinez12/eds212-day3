@@ -38,14 +38,6 @@ if (stringr::str_detect(food, pattern = "burritos")){
   print("what about burritos!")
 
 #More options with if else statments 
-"yellow"
-if (marmot < 0.5) {
-  print("small")
-} else if (marmot >= 0.5 & < 3) {
-  print("medium")
-} else }
-  print("large")
-  }
 
 marmot <- 1
 if (marmot < 0.5) {
@@ -134,6 +126,65 @@ for (i in seq_along(tree_hieght)) {
   val <- tree_hieght[i] + tree_hieght[i + 1]
   print(val)
 }
+
+
+# create a vector of animals
+animal <- c("cat", "dog", "dog", "zebra", "dog")
+i <- 3
+
+
+if (animal[i] == "dog"){
+  print("I love dogs")
+} else
+  print("these are other animals")
+
+for (i in seq_along(animal)) {
+  if (animal[i] == "dog"){
+    print("I love dogs")
+  } else
+    print("these are other animals")
+}
+
+#another for loop example with conditional statements
+
+#animal species
+species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
+
+#and thier respective ages in human years
+age_human <- c(3,8,4,6,12,18)
+
+#convert ages to "animal years" using the following
+# 1 human year = 7 in dog years
+# 1 human year = .88 in elephant years
+# 1 human year = 4.7 in goat years
+
+#allocate space for out output
+animal_ages <- vector(mode = "numeric", length = length(species))
+
+for (i in seq_along(species)){
+  if (species[i] == "dog") {
+  animal_age <- age_human[i] * 7
+} else if (species[i] == "elephant") {
+  animal_age <- age_human[i] * 0.88
+} else if (species[i] == "goat") {
+  animal_age <- age_human[i] *4.7
+}
+  animal_ages[i] <- animal_age
+}
+
+#another example of storing
+tigers <- c(29, 34, 82)
+lions <- c(2,18,6)
+
+#allocate storage for new values
+big_cats <- vector(mode = "numeric", length = length(tigers))
+
+
+for (i in seq_along(tigers)){
+  big_cats[i] <- tigers[i]+lions[i]
+}
+
+
 
 
 
